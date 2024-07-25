@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歌曲生成器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        textarea {
+            width: 80%;
+            height: 300px;
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>歌曲生成器</h1>
+    <textarea id="lyrics" readonly>
+第一段
+江夏黄氏一家亲，
+血脉相连心连心。
+千年传承不曾变，
+同根同源情意深。
+
+副歌
+江夏的风，吹动着我们的心，
+黄氏的魂，永远不会被遗忘。
+一家亲，一家亲，
+江夏黄氏永远一家亲。
+
+第二段
+五湖四海走天涯，
+心中故乡永不离。
+无论何时何地见，
+一句乡音暖人心。
+
+副歌
+江夏的风，吹动着我们的心，
+黄氏的魂，永远不会被遗忘。
+一家亲，一家亲，
+江夏黄氏永远一家亲。
+
+桥段
+岁月如歌不断流，
+黄氏儿女共携手。
+未来路上齐奋斗，
+家族荣耀在心头。
+
+第三段（新增）
+黄帝后裔传千年，
+江夏郡望世代延。
+忠孝仁义是家训，
+勤奋好学家风严。
+
+副歌
+江夏的风，吹动着我们的心，
+黄氏的魂，永远不会被遗忘。
+一家亲，一家亲，
+江夏黄氏永远一家亲。
+
+结尾
+江夏黄氏永远一家亲，
+江夏黄氏永远一家亲。
+    </textarea>
+    <br>
+    <button onclick="playSong()">播放歌曲</button>
+    <audio id="melody" src="melody.mp3"></audio>
+    <audio id="harmony" src="harmony.mp3"></audio>
+    <audio id="rhythm" src="rhythm.mp3"></audio>
+    <script>
+        function playSong() {
+            const melody = document.getElementById('melody');
+            const harmony = document.getElementById('harmony');
+            const rhythm = document.getElementById('rhythm');
+            
+            melody.play();
+            harmony.play();
+            rhythm.play();
+            
+            alert("正在播放的歌曲:\n\n" + document.getElementById('lyrics').value);
+        }
+    </script>
+</body>
+</html>
